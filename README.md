@@ -5,7 +5,7 @@ This README describes the full, production-ready Qur’an Institute platform (mo
 #  1. Project summary (one line)
 Qi: a global, academy-grade, offline-first mobile learning platform delivering Qur’an, Tarbiyah and Sharia education — scholar-vetted, localized, and integrated into daily life.
 
-#2. Mission & non-negotiable principles
+#  2. Mission & non-negotiable principles
 Mission: Make reliable, source-linked Islamic learning available to any Muslim, anywhere, regardless of connectivity or schedule.
 
 
