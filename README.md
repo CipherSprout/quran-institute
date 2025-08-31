@@ -1,8 +1,8 @@
-#Qur’an Institute (Qi) — Full Product Repository
+# Qur’an Institute (Qi) — Full Product Repository
 
 This README describes the full, production-ready Qur’an Institute platform (mobile-first, offline-capable, scholar-governed learning platform for Qur’an, Tarbiyah & Sharia). It’s not an MVP doc — it’s the canonical handbook for engineering, ops, governance and contributors for the full system.
 
-#1. Project summary (one line)
+1. Project summary (one line)
 Qi: a global, academy-grade, offline-first mobile learning platform delivering Qur’an, Tarbiyah and Sharia education — scholar-vetted, localized, and integrated into daily life.
 
 #2. Mission & non-negotiable principles
