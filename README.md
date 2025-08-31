@@ -2,7 +2,7 @@
 
 This README describes the full, production-ready Qur’an Institute platform (mobile-first, offline-capable, scholar-governed learning platform for Qur’an, Tarbiyah & Sharia). It’s not an MVP doc — it’s the canonical handbook for engineering, ops, governance and contributors for the full system.
 
-#  1. Project summary (one line)
+#  1. Project summary
 Qi: a global, academy-grade, offline-first mobile learning platform delivering Qur’an, Tarbiyah and Sharia education — scholar-vetted, localized, and integrated into daily life.
 
 #  2. Mission & non-negotiable principles
@@ -11,7 +11,7 @@ Mission: Make reliable, source-linked Islamic learning available to any Muslim, 
 
 Non-negotiables: Scholar governance, offline-first, low-bandwidth-first, pedagogically sound (mastery + SRS), auditable provenance, privacy-by-default.
 
-#3. High-level system overview (components)
+# 3. High-level system overview (components)
 Mobile (primary): Expo React Native app (JavaScript; no TypeScript). PWA fallback for web.
 
 
@@ -40,7 +40,7 @@ Monitoring / Observability: Prometheus + Grafana (metrics), Sentry (errors), ELK
 
 
 
-4. Key product features (production scope)
+# 4. Key product features (production scope)
 Structured curriculum (Qur’an, Tarbiyah, Fiqh) with levels and prerequisites.
 
 
@@ -75,7 +75,7 @@ GDPR-like privacy controls and encrypted at-rest storage.
 
 
 
-5. Tech stack (recommended)
+# 5. Tech stack (recommended)
 Frontend: Expo (React Native, JS), PWA (React).
 
 
@@ -98,7 +98,7 @@ Dev tooling: Docker for local dev, Docker Compose for integration.
 
 
 
-6. Repo layout (canonical)
+# 6. Repo layout (canonical)
 / (repo root)
   /frontend               # Expo app (React Native) + PWA
     /components
@@ -127,7 +127,7 @@ Dev tooling: Docker for local dev, Docker Compose for integration.
   README.md
 
 
-7. Quickstart (developer: local dev) — copy & run
+# 7. Quickstart (developer: local dev) — copy & run
 Prerequisites: Node 18+, npm, Expo CLI, Docker, PostgreSQL (local or Docker), Redis (local or Docker).
 Backend (local)
 # from repo root
@@ -158,7 +158,7 @@ npm install
 npm run dev
 
 
-8. API & contract highlights (public surface)
+# 8. API & contract highlights (public surface)
 POST /auth/login — returns JWT + refresh token.
 
 
@@ -179,7 +179,7 @@ POST /scholar/review — submit content for board approval (scholar role require
 
 Full OpenAPI/Swagger specification lives in /backend/docs/openapi.yml.
 
-9. Offline packs & sync (behavioral contract)
+# 9. Offline packs & sync (behavioral contract)
 Pack manifest { id, version, files: [{url, checksum, size, type}], sizeBytes } exposed at /packs/:packId/manifest.
 
 
@@ -193,7 +193,7 @@ Conflict resolution: server content authoritative; user progress merged by times
 
 
 
-10. Content governance & Sharia Board
+# 10. Content governance & Sharia Board
 Every doctrinal module must include provenance metadata: {sourceRefs[], authorId, scholarApprovals: [{scholarId, timestamp, notes}]}.
 
 
@@ -204,7 +204,7 @@ Sharia Board MoU and review SLA live in /docs/sharia-board-mou.md.
 
 
 
-11. Security, privacy & compliance
+# 11. Security, privacy & compliance
 Auth: JWT + refresh tokens. Device-bound offline tokens with expiry (e.g., 30 days).
 
 
@@ -224,7 +224,7 @@ Data retention policy and opt-in/opt-out flows defined in /docs/privacy-policy.m
 
 
 
-12. Observability & SLOs
+# 12. Observability & SLOs
 Errors: Sentry (capture exceptions).
 
 
@@ -238,7 +238,7 @@ SLO examples: recitation upload success rate ≥ 99% (24h rolling), Mentor revie
 
 
 
-13. Testing & QA
+# 13. Testing & QA
 Unit tests: Jest (backend and frontend). No TypeScript.
 
 
@@ -252,7 +252,7 @@ Accessibility & localization checks: include Arabic layout & RTL testing on CI.
 
 
 
-14. Deployment & infra (production notes)
+# 14. Deployment & infra (production notes)
 Use IaC (Terraform) — modules in /infra.
 
 
@@ -269,7 +269,7 @@ Blue/green for app releases; database migration via Flyway or node-pg-migrate.
 
 
 
-15. Operational runbooks (short)
+# 15. Operational runbooks (short)
 Recitation backlog increase: scale workers, increase upload throughput, notify Mentor Manager.
 
 
@@ -280,7 +280,7 @@ Data breach: follow incident response plan (contacts in /ops/incident-response.m
 
 
 
-16. Roadmap (next 6–12 months)
+# 16. Roadmap (next 6–12 months)
 Multi-madhhab support & per-region editorial flows.
 
 
@@ -297,7 +297,7 @@ Institutional partnerships & licensing portal.
 
 
 
-17. KPIs & success metrics (organizational)
+# 17. KPIs & success metrics (organizational)
 Activation: % users completing lesson 1 within 7d. Target ≥ 40%.
 
 
@@ -314,7 +314,7 @@ NPS ≥ 30 at 6 months.
 
 
 
-18. Contribution guide (engineers & scholars)
+# 18. Contribution guide (engineers & scholars)
 Engineers: branch from develop, branch naming: feat/<short>, fix/<short>. PRs require 2 approvals and passing CI. Add tests for new logic.
 
 
@@ -322,7 +322,7 @@ Scholars & content editors: use /cms to prepare drafts; submit via Scholar Revie
 
 
 
-19. Developer contacts & governance
+# 19. Developer contacts & governance
 Product Owner: [REPLACE]
 
 
@@ -334,12 +334,12 @@ Sharia Board Chair: [REPLACE]
 
 
 
-20. License & legal
+# 20. License & legal
 Default: MIT (or choose organization-specific license). Place LICENSE file at repo root. Legal review required for content licensing and third-party tafsir translations.
 
 
 
-21. How to get help / next steps
+# 21. How to get help / next steps
 Fork & clone this repo.
 
 
